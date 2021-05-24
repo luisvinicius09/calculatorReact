@@ -3,11 +3,11 @@
 </p>
   
 <h1 align="center">
-  Project Name
+  CalculatorJS
 </h1>
 
 <h4 align="center">
-  One paragraph statement about the project.
+  Simple calculator build with React.js and Big.js
 </h4>
 
 <p align="center">
@@ -18,19 +18,17 @@ Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- React.js
+- HTML/CSS
+- JavaScript
+- Big.js
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://calcreact223.herokuapp.com)
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
 
 To get a local copy up and running follow these simple example steps.
