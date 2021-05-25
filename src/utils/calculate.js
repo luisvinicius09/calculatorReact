@@ -9,7 +9,6 @@ const calculate = ({ total, next, operation }, button) => {
         operation: null,
       };
     case '+/-':
-      
       if (total) {
         return {
           total: (parseFloat(total) * -1).toString(),
@@ -60,7 +59,7 @@ const calculate = ({ total, next, operation }, button) => {
       };
     case operation: {
       if(total && next) {
-        const result = operate(total, next, operation);
+        const result = Operate(total, next, operation);
         return result;
       }
       return {
@@ -71,7 +70,7 @@ const calculate = ({ total, next, operation }, button) => {
     }
     case '=': {
       if(total && next) {
-        const result = operate(total, next, operation);
+        const result = Operate(total, next, operation);
         return {
           total: result,
           next: null,
