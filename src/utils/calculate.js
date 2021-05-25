@@ -85,7 +85,46 @@ const calculate = ({ total, next, operation }, button) => {
       };
     }
     case '.':
-
+      if (total && !next && !operation) {
+        if (total.includes('.')) {
+          return {
+            total,
+            next,
+            operation,
+          }
+        }
+        return {
+          total: `${total}.`,
+          next,
+          operation,
+        }
+      }
+      if (total && next) {
+        if (next.includes('.')) {
+          return {
+            total,
+            next,
+            operation,
+          }
+        }
+        return {
+          total,
+          next: `${next}.`,
+          operation,
+        }
+      }
+      if (total && operation) {
+        return {
+          total,
+          next: '0.',
+          operation,
+        }
+      }
+      return {
+        total: '0.',
+        next,
+        operation,
+      }
   }
 
 };
