@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Display = ({ result = 0 }) => (
+const Display = ({ result }) => (
   <div>
     <h1>{result}</h1>
   </div>
@@ -8,6 +8,10 @@ const Display = ({ result = 0 }) => (
 
 export default Display;
 
+Display.defaultProps = {
+  result: '0',
+};
+
 Display.propTypes = {
-  result: PropTypes.string.isRequired,
+  result: PropTypes.string,
 };
