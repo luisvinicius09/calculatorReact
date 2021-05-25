@@ -1,7 +1,13 @@
-const Button = () => (
-  <div>
-    <h1>button component</h1>
-  </div>
+import PropTypes from 'prop-types';
+
+const Button = ({ value }) => (
+  <>
+    <span>{value}</span>
+  </>
 );
 
-export default Button.apply;
+export default Button;
+
+Button.propTypes = {
+  value: PropTypes.string.isRequired,
+};
