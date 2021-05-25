@@ -69,7 +69,21 @@ const calculate = ({ total, next, operation }, button) => {
         operation
       };
     }
-    case '=': 
+    case '=': {
+      if(total && next) {
+        const result = operate(total, next, operation);
+        return {
+          total: result,
+          next: null,
+          operation: null,
+        };
+      }
+      return {
+        total,
+        next,
+        operation
+      };
+    }
     case '.':
 
   }
