@@ -58,7 +58,17 @@ const calculate = ({ total, next, operation }, button) => {
         next,
         operation
       };
-    case operation: 
+    case operation: {
+      if(total && next) {
+        const result = operate(total, next, operation);
+        return result;
+      }
+      return {
+        total,
+        next,
+        operation
+      };
+    }
     case '=': 
     case '.':
 
