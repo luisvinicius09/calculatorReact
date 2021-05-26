@@ -7,6 +7,8 @@ export default class App extends Component {
   constructor() {
     super();
     this.total = null;
+    this.next = null;
+    this.operation = null;
   }
 
   render() {
