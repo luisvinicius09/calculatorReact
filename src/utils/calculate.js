@@ -1,3 +1,4 @@
+import Big from 'big.js';
 import Operate from './operate';
 
 const calculate = ({ total, next, operation }, button) => {
@@ -26,14 +27,14 @@ const calculate = ({ total, next, operation }, button) => {
           return {
             total: Big(total).div(100).toString(),
             next,
-            operation
+            operation,
           };
         }
         return {
           total,
           next: Big(total).div(100).toString(),
           operation,
-        }
+        };
       }
       if (total && next) {
         if (operation === '+' || operation === '-') {
@@ -43,33 +44,34 @@ const calculate = ({ total, next, operation }, button) => {
             next: modifier,
             operation,
           };
-        } else if (operation === 'x' || operation === '÷') {
+        }
+        if (operation === 'x' || operation === '÷') {
           const modifier = Big(next).div(100).toString();
           return {
             total,
             next: modifier,
             operation,
           };
-        };
+        }
       }
       return {
         total,
         next,
-        operation
+        operation,
       };
     case operation: {
-      if(total && next) {
+      if (total && next) {
         const result = Operate(total, next, operation);
         return result;
       }
       return {
         total,
         next,
-        operation
+        operation,
       };
     }
     case '=': {
-      if(total && next) {
+      if (total && next) {
         const result = Operate(total, next, operation);
         return {
           total: result,
@@ -80,7 +82,7 @@ const calculate = ({ total, next, operation }, button) => {
       return {
         total,
         next,
-        operation
+        operation,
       };
     }
     case '.':
@@ -90,13 +92,13 @@ const calculate = ({ total, next, operation }, button) => {
             total,
             next,
             operation,
-          }
+          };
         }
         return {
           total: `${total}.`,
           next,
           operation,
-        }
+        };
       }
       if (total && next) {
         if (next.includes('.')) {
@@ -104,28 +106,29 @@ const calculate = ({ total, next, operation }, button) => {
             total,
             next,
             operation,
-          }
+          };
         }
         return {
           total,
           next: `${next}.`,
           operation,
-        }
+        };
       }
       if (total && operation) {
         return {
           total,
           next: '0.',
           operation,
-        }
+        };
       }
       return {
         total: '0.',
         next,
         operation,
-      }
+      };
+    // no default
   }
-
+  return {};
 };
 
 export default calculate;

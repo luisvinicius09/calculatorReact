@@ -3,7 +3,7 @@ import Big from 'big.js';
 const operate = (nOne, nTwo, operation) => {
   const x = Big(nOne);
   const y = Big(nTwo);
-  switch(operation) {
+  switch (operation) {
     case '+':
       return x.plus(y).toString();
     case '-':
@@ -11,11 +11,13 @@ const operate = (nOne, nTwo, operation) => {
     case 'x':
       return x.times(y).toString();
     case '÷':
-      if (y == '0') {
-        return 'Division by zero - Error'
+      if (y === '0') {
+        return 'Division by zero - Error';
       }
       return x.div(y).toString();
+    // no default
   }
-}
+  return {};
+};
 
 export default operate;

@@ -6,7 +6,7 @@ import Calculate from '../utils/calculate';
 const App = () => (
   <>
     <Display />
-    <ButtonPanel />
+    <ButtonPanel value={Calculate} />
   </>
 );
 
