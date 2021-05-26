@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 import Calculate from '../logic/calculate';
 
-const App = () => (
-  <>
-    <Display />
-    <ButtonPanel value={Calculate} />
-  </>
-);
+export default class App extends Component {
+  constructor() {
+    super();
+    this.total = null;
+  }
 
-export default App;
+  render() {
+    return (
+      <>
+        <Display />
+        <ButtonPanel value={Calculate} />
+      </>
+    );
+  }
+}
