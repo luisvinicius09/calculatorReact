@@ -1,7 +1,7 @@
 import React from 'react';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
-import Calculate from '../utils/calculate';
+import Calculate from '../logic/calculate';
 
 const App = () => (
   <>
