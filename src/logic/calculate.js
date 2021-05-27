@@ -10,63 +10,43 @@ const calculate = ({ total, next, operation }, button) => {
         operation: null,
       };
     case '+/-':
-      if (total) {
-        return {
-          total: (parseFloat(total) * -1).toString(),
-        };
-      }
-      if (next) {
-        return {
-          next: (parseFloat(next) * -1).toString(),
-        };
-      }
-      return {};
+      return total ? {
+        total: (Big(total).times(-1)).toString(),
+      } : {
+        next: (Big(next).times(-1)).toString(),
+      };
     case '%':
       if (total && !next) {
         if (!operation) {
           return {
             total: Big(total).div(100).toString(),
-            next,
-            operation,
           };
         }
         return {
-          total,
           next: Big(total).div(100).toString(),
-          operation,
         };
       }
       if (total && next) {
         if (operation === '+' || operation === '-') {
           const modifier = Big(next).div(100).times(total).toString();
           return {
-            total,
             next: modifier,
-            operation,
           };
         }
         if (operation === 'x' || operation === '÷') {
           const modifier = Big(next).div(100).toString();
           return {
-            total,
             next: modifier,
-            operation,
           };
         }
       }
-      return {
-        total,
-        next,
-        operation,
-      };
+      return {};
     case '+':
     case '-':
     case 'x':
-    case '÷': {
+    case '÷':
       if (total) {
         return {
-          total,
-          next,
           operation: button,
         };
       }
@@ -79,62 +59,27 @@ const calculate = ({ total, next, operation }, button) => {
         };
       }
       break;
-    }
-    case '=': {
-      if (total && next) {
-        const result = Operate(total, next, operation);
-        return {
-          total: result,
-          next: null,
-          operation: null,
-        };
-      }
-      return {
-        total,
-        next,
-        operation,
-      };
-    }
+    case '=':
+      return total && next ? {
+        total: Operate(total, next, operation),
+        next: null,
+        operation: null,
+      } : {};
     case '.':
       if (total && !next && !operation) {
-        if (total.includes('.')) {
-          return {
-            total,
-            next,
-            operation,
-          };
-        }
-        return {
+        return total.includes('.') ? {} : {
           total: `${total}.`,
-          next,
-          operation,
         };
       }
       if (total && next) {
-        if (next.includes('.')) {
-          return {
-            total,
-            next,
-            operation,
-          };
-        }
-        return {
-          total,
+        return next.includes('.') ? {} : {
           next: `${next}.`,
-          operation,
         };
       }
-      if (total && operation) {
-        return {
-          total,
-          next: '0.',
-          operation,
-        };
-      }
-      return {
+      return total && operation ? {
+        next: '0.',
+      } : {
         total: '0.',
-        next,
-        operation,
       };
     case '1': case '2': case '3': case '4':
     case '5': case '6': case '7': case '8':
@@ -143,31 +88,23 @@ const calculate = ({ total, next, operation }, button) => {
         if (total.includes('.')) {
           return {
             total: `${total}${button}`,
-            next,
-            operation,
           };
         }
       }
       if (next) {
         if (next.includes('.')) {
           return {
-            total,
             next: `${next}${button}`,
-            operation,
           };
         }
       }
       if (!operation) {
         return {
           total: `${total || ''}${button}`,
-          next,
-          operation,
         };
       }
       return {
-        total,
         next: `${next || ''}${button}`,
-        operation,
       };
     // no default
   }
