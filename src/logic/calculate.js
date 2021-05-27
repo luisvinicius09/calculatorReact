@@ -59,16 +59,26 @@ const calculate = ({ total, next, operation }, button) => {
         next,
         operation,
       };
-    case operation: {
-      if (total && next) {
-        const result = Operate(total, next, operation);
-        return result;
+    case '+':
+    case '-':
+    case 'x':
+    case '÷': {
+      if (total) {
+        return {
+          total,
+          next,
+          operation: button,
+        };
       }
-      return {
-        total,
-        next,
-        operation,
-      };
+      if (operation) {
+        const result = Operate(total, next, operation);
+        return {
+          total: result,
+          next: null,
+          operation: null,
+        };
+      }
+      break;
     }
     case '=': {
       if (total && next) {
@@ -124,6 +134,39 @@ const calculate = ({ total, next, operation }, button) => {
       return {
         total: '0.',
         next,
+        operation,
+      };
+    case '1': case '2': case '3': case '4':
+    case '5': case '6': case '7': case '8':
+    case '9': case '0':
+      if (total) {
+        if (total.includes('.')) {
+          return {
+            total: `${total}${button}`,
+            next,
+            operation,
+          };
+        }
+      }
+      if (next) {
+        if (next.includes('.')) {
+          return {
+            total,
+            next: `${next}${button}`,
+            operation,
+          };
+        }
+      }
+      if (!operation) {
+        return {
+          total: `${total || ''}${button}`,
+          next,
+          operation,
+        };
+      }
+      return {
+        total,
+        next: `${next || ''}${button}`,
         operation,
       };
     // no default
