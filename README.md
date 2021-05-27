@@ -10,12 +10,6 @@
   Simple calculator build with React.js and Big.js
 </h4>
 
-<p align="center">
-  <img src="./app_screenshot.png">
-</p>
-  
-Additional description about the project and its features.
-
 ## Built With
 
 - React.js
@@ -30,20 +24,29 @@ Additional description about the project and its features.
 
 ## Getting Started
 
-
-To get a local copy up and running follow these simple example steps.
+If you are willing to see the project on your machine follow the steps bellow
 
 ### Prerequisites
 
+- [Node.js](https://nodejs.org/en/) installed on your machine
+- Code editor
+- Browser.
+
 ### Setup
+
+- Download or clone the repository to your local.
 
 ### Install
 
+- Run `npm install` to install all the dependencies.
+
 ### Usage
 
-### Run tests
+- To open the project on your browser run `npm start`.
 
 ### Deployment
+
+- This project was deployed on [Heroku](https://herokuapp.com) using this [buildpack](https://github.com/mars/create-react-app-buildpack) from [mars](https://github.com/mars).
 
 
 ## 🤝 Contributing
@@ -61,10 +64,6 @@ Give a ⭐️ if you like this project!
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
-
-## 📝 License
-
-This project is [MIT](lic.url) licensed.
 
 <h2 align="center">
   Author(s)  
