@@ -3,56 +3,57 @@
 </p>
   
 <h1 align="center">
-  Project Name
+  CalculatorJS
 </h1>
 
 <h4 align="center">
-  One paragraph statement about the project.
+  Simple calculator build with React.js and Big.js
 </h4>
-
-<p align="center">
-  <img src="./app_screenshot.png">
-</p>
-  
-Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- React.js
+- HTML/CSS
+- JavaScript
+- Big.js
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://calcreact223.herokuapp.com)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+If you are willing to see the project on your machine follow the steps bellow
 
 ### Prerequisites
 
+- [Node.js](https://nodejs.org/en/) installed on your machine
+- Code editor
+- Browser.
+
 ### Setup
+
+- Download or clone the repository to your local.
 
 ### Install
 
+- Run `npm install` through the console to install all the dependencies.
+
 ### Usage
 
-### Run tests
+- To open the project on your browser run `npm start` while your console is on the project's folder.
 
 ### Deployment
+
+- This project was deployed on [Heroku](https://herokuapp.com) using this [buildpack](https://github.com/mars/create-react-app-buildpack) from [mars](https://github.com/mars).
 
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/luisvinicius09/calculatorReact/issues).
 
 ## Show your support
 
@@ -64,37 +65,16 @@ Give a ⭐️ if you like this project!
 - Inspiration
 - etc
 
-## 📝 License
-
-This project is [MIT](lic.url) licensed.
-
 <h2 align="center">
   Author(s)  
 </h2>
 
 <p align="center">
-  <strong>Author1 👤</strong>  
+  <strong>Luis Vinicius Marques 👤</strong>  
 </p>
 
 <p align="center">
-  GitHub: <a href="https://github.com/githubhandle">@githubhandle</a>
-</p>
-<p align="center">
-  Twitter: <a href="https://twitter.com/twitterhandle">@twitterhandle</a>  
-</p>
-<p align="center">
-  LinkedIn: <a href="https://linkedin.com/linkedinhandle">LinkedIn</a>
-</p>
-
-<p align="center">
-  <strong>Author2 👤</strong>  
-</p>
-
-<p align="center">
-  GitHub: <a href="https://github.com/githubhandle">@githubhandle</a>
-</p>
-<p align="center">
-  Twitter: <a href="https://twitter.com/twitterhandle">@twitterhandle</a>  
+  GitHub: <a href="https://github.com/luisvinicius09">@luisvinicius09</a>
 </p>
 <p align="center">
   LinkedIn: <a href="https://linkedin.com/linkedinhandle">LinkedIn</a>
