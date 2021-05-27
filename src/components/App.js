@@ -30,6 +30,9 @@ export default class App extends Component {
     }
     return (
       <>
+        <span>{total}</span>
+        <span>{operation}</span>
+        <span>{next}</span>
         <Display result={results || '0'} />
         <ButtonPanel clickHandler={this.handleClick} />
       </>
