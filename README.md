@@ -38,11 +38,11 @@ If you are willing to see the project on your machine follow the steps bellow
 
 ### Install
 
-- Run `npm install` to install all the dependencies.
+- Run `npm install` through the console to install all the dependencies.
 
 ### Usage
 
-- To open the project on your browser run `npm start`.
+- To open the project on your browser run `npm start` while your console is on the project's folder.
 
 ### Deployment
 
