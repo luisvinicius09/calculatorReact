@@ -24,9 +24,18 @@ const App = () => {
     }
   }
 
+  const styles = {
+    display: 'flex',
+    width: '700px',
+    flexDirection: 'column',
+    margin: 'auto',
+    position: 'relative',
+    top: '100px',
+  };
+
   return (
     <>
-      <div>
+      <div style={styles}>
         <Display result={value || '0'} />
         <ButtonPanel clickHandler={handleClick} />
       </div>
