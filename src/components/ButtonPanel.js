@@ -5,10 +5,24 @@ import symbols from '../utils/symbols';
 const ButtonPanel = ({ clickHandler }) => {
   const handleClick = (buttonName) => clickHandler(buttonName);
 
+  const styles = {
+    display: 'flex',
+    height: '400px',
+    flexWrap: 'wrap',
+  };
+
   return (
     <>
-      <div>
-        {symbols.map((s) => <Button value={s.symbol} key={s.symbol} clickHandler={handleClick} />)}
+      <div style={styles}>
+        {symbols.map((s) => (
+          <Button
+            value={s.symbol}
+            key={s.symbol}
+            color={s.type === 'num' ? '#edf6f9' : '#fb8500'}
+            wide={s.symbol === '0'}
+            clickHandler={handleClick}
+          />
+        ))}
       </div>
     </>
   );
