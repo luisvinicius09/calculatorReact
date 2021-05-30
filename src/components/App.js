@@ -26,11 +26,10 @@ const App = () => {
 
   return (
     <>
-      <span>{total}</span>
-      <span>{operation}</span>
-      <span>{next}</span>
-      <Display result={value || '0'} />
-      <ButtonPanel clickHandler={handleClick} />
+      <div>
+        <Display result={value || '0'} />
+        <ButtonPanel clickHandler={handleClick} />
+      </div>
     </>
   );
 };
