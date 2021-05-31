@@ -13,7 +13,7 @@ const calculate = ({ total, next, operation }, button) => {
       return total ? {
         total: (Big(total).times(-1)).toString(),
       } : {
-        nexta: (Big(next).times(-1)).toString(),
+        next: (Big(next).times(-1)).toString(),
       };
     case '%':
       if (total && !next) {

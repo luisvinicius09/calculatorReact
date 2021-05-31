@@ -12,12 +12,12 @@ const calculate = ({ total, next, operation }, button) => {
     case '+/-':
       if (total) {
         return {
-          total: (parseFloat(total) * -1).toString(),
+          total: (Big(total).times(-1)).toString(),
         };
       }
       if (next) {
         return {
-          next: (parseFloat(next) * -1).toString(),
+          next: (Big(next).times(-1)).toString(),
         };
       }
       return {};
