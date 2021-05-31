@@ -69,7 +69,7 @@ const symbols = [
   },
   {
     symbol: '.',
-    type: 'operator',
+    type: 'num',
   },
   {
     symbol: '=',
