@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../css/button.css';
 
 const Button = ({
   value, clickHandler, color, wide,
@@ -8,15 +9,13 @@ const Button = ({
   const size = wide ? '1 1 50%' : '1 1 25%';
 
   const styles = {
-    color: 'black',
-    border: '1px solid black',
     backgroundColor: color,
     flex: size,
   };
 
   return (
     <>
-      <button style={styles} type="button" onClick={handleClick}>{value}</button>
+      <button style={styles} className="button" type="button" onClick={handleClick}>{value}</button>
     </>
   );
 };
