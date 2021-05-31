@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ButtonPanel from './ButtonPanel';
 import Display from './Display';
 import Calculate from '../logic/calculate';
+import NavBar from './Navbar';
 
 const App = () => {
   const [results, setResults] = useState({
@@ -35,6 +36,7 @@ const App = () => {
 
   return (
     <>
+      <NavBar />
       <div style={styles}>
         <Display result={value || '0'} />
         <ButtonPanel clickHandler={handleClick} />
