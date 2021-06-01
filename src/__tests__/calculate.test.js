@@ -69,49 +69,41 @@ describe('tests on buttons logic', () => {
     expect(values).toMatchObject(expected);
   });
 
-  it ('% logic', () => {
-
+  it ('= logic returns the total from a calculation', () => {
+    const values = calculate({ total: '10', next: '42', operation: '+' }, '=');
+    const expected = { total: '52', next: null, operation: null };
+    expect(values).toMatchObject(expected);
   });
 
-  it ('+ logic', () => {
-
+  it ('. logic returns a dot after the number if it is not zero', () => {
+    const values = calculate({ total: '10', next: null, operation: null }, '.');
+    const expected = { total: '10.', next: null, operation: null };
+    expect(values).toMatchObject(expected);
   });
 
-  it ('- logic', () => {
-
-  });
-
-  it ('x logic', () => {
-
-  });
-
-  it ('÷ logic', () => {
-
-  });
-
-  it ('= logic', () => {
-
-  });
-
-  it ('. logic', () => {
-
+  it ('. logic returns a zero with a dot', () => {
+    const values = calculate({ total: null, next: null, operation: null }, '.');
+    const expected = { total: '0.', next: null, operation: null };
+    expect(values).toMatchObject(expected);
   });
 });
 
-// describe('numbers buttons', () => {
-//   it('', () => {
+describe('numbers buttons', () => {
+  it('sends a number to total or next as a value', () => {
+    const number = calculate({ total: null, next: null, operation: null }, '1');
+    const expected = { total: '1', next: null, operation: null };
+    expect(number).toMatchObject(expected);
+  });
 
-//   });
+  it('sends a number to total or next as a value', () => {
+    const number = calculate({ total: '10', next: null, operation: '-' }, '9');
+    const expected = { total: '10', next: '9', operation: '-' };
+    expect(number).toMatchObject(expected);
+  });
+});
 
-//   it('', () => {
-
-//   });
-
-//   it('', () => {
-
-//   });
-
-//   it('', () => {
-
-//   });
-// });
+it('returns an empty object if the button is invalid', () => {
+  const number = calculate({ total: null, next: null, operation: null }, 'g');
+  const expected = {};
+  expect(number).toMatchObject(expected);
+})
