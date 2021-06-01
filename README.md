@@ -48,6 +48,9 @@ If you are willing to see the project on your machine follow the steps bellow
 
 - This project was deployed on [Heroku](https://herokuapp.com) using this [buildpack](https://github.com/mars/create-react-app-buildpack) from [mars](https://github.com/mars).
 
+### Tests
+
+- To run the tests, open the terminal/console and run `npm test`
 
 ## 🤝 Contributing
 
