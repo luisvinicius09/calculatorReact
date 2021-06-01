@@ -1,39 +1,28 @@
 import PropTypes from 'prop-types';
 import Button from './Button';
+import symbols from '../utils/symbols';
 
 const ButtonPanel = ({ clickHandler }) => {
   const handleClick = (buttonName) => clickHandler(buttonName);
 
+  const styles = {
+    display: 'flex',
+    height: '400px',
+    flexWrap: 'wrap',
+  };
+
   return (
     <>
-      <div>
-        <Button value="A/C" clickHandler={handleClick} />
-        <Button value="+/-" clickHandler={handleClick} />
-        <Button value="%" clickHandler={handleClick} />
-        <Button value="÷" clickHandler={handleClick} />
-      </div>
-      <div>
-        <Button value="1" clickHandler={handleClick} />
-        <Button value="2" clickHandler={handleClick} />
-        <Button value="3" clickHandler={handleClick} />
-        <Button value="x" clickHandler={handleClick} />
-      </div>
-      <div>
-        <Button value="4" clickHandler={handleClick} />
-        <Button value="5" clickHandler={handleClick} />
-        <Button value="6" clickHandler={handleClick} />
-        <Button value="+" clickHandler={handleClick} />
-      </div>
-      <div>
-        <Button value="7" clickHandler={handleClick} />
-        <Button value="8" clickHandler={handleClick} />
-        <Button value="9" clickHandler={handleClick} />
-        <Button value="-" clickHandler={handleClick} />
-      </div>
-      <div>
-        <Button value="0" clickHandler={handleClick} />
-        <Button value="." clickHandler={handleClick} />
-        <Button value="=" clickHandler={handleClick} />
+      <div style={styles}>
+        {symbols.map((s) => (
+          <Button
+            value={s.symbol}
+            key={s.symbol}
+            color={s.type === 'num' ? '#edf6f9' : '#fb8500'}
+            wide={s.symbol === '0'}
+            clickHandler={handleClick}
+          />
+        ))}
       </div>
     </>
   );
