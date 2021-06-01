@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the navbar correctly 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "marginLeft": "10px",
+      }
+    }
+  >
+    <h1>
+      Math Magicians
+    </h1>
+  </div>
+  <div
+    style={
+      Object {
+        "margin": "30px",
+      }
+    }
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+      style={
+        Object {
+          "paddingRight": "10px",
+        }
+      }
+    >
+      Home
+    </a>
+    <a
+      href="/calculator"
+      onClick={[Function]}
+      style={
+        Object {
+          "paddingRight": "10px",
+        }
+      }
+    >
+      Calculator
+    </a>
+    <a
+      href="/quote"
+      onClick={[Function]}
+    >
+      Quote of the day
+    </a>
+  </div>
+</div>
+`;

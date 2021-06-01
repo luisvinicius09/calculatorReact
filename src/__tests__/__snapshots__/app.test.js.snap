@@ -1,0 +1,350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the app correctly 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "marginLeft": "10px",
+        }
+      }
+    >
+      <h1>
+        Math Magicians
+      </h1>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": "30px",
+        }
+      }
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+        style={
+          Object {
+            "paddingRight": "10px",
+          }
+        }
+      >
+        Home
+      </a>
+      <a
+        href="/calculator"
+        onClick={[Function]}
+        style={
+          Object {
+            "paddingRight": "10px",
+          }
+        }
+      >
+        Calculator
+      </a>
+      <a
+        href="/quote"
+        onClick={[Function]}
+      >
+        Quote of the day
+      </a>
+    </div>
+  </div>,
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "column",
+        "margin": "auto",
+        "position": "relative",
+        "top": "100px",
+        "width": "700px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "grey",
+          "color": "white",
+          "display": "flex",
+          "flexDirection": "column",
+          "height": "100px",
+          "padding": "0 10px 0 10px",
+          "textAlign": "right",
+        }
+      }
+    >
+      <h1>
+        0
+      </h1>
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flexWrap": "wrap",
+          "height": "400px",
+        }
+      }
+    >
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fb8500",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        A/C
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fb8500",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        +/-
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fb8500",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        %
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fb8500",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        ÷
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#edf6f9",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        1
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#edf6f9",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        2
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#edf6f9",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        3
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fb8500",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        x
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#edf6f9",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        4
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#edf6f9",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        5
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#edf6f9",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        6
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fb8500",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        +
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#edf6f9",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        7
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#edf6f9",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        8
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#edf6f9",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        9
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fb8500",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        -
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#edf6f9",
+            "flex": "1 1 50%",
+          }
+        }
+        type="button"
+      >
+        0
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#edf6f9",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        .
+      </button>
+      <button
+        className="button"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#fb8500",
+            "flex": "1 1 25%",
+          }
+        }
+        type="button"
+      >
+        =
+      </button>
+    </div>
+  </div>,
+]
+`;
