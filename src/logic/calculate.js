@@ -16,13 +16,12 @@ const calculate = ({ total, next, operation }, button) => {
           next,
           operation,
         };
-      } else {
-        return {
-          total,
-          next: (Big(next).times(-1)).toString(),
-          operation,
-        };
       }
+      return {
+        total,
+        next: (Big(next).times(-1)).toString(),
+        operation,
+      };
     case '%':
       if (total && !next) {
         if (!operation) {

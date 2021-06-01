@@ -1,9 +1,9 @@
-import calculate from '../logic/calculate.js';
+import calculate from '../logic/calculate';
 
 describe('calculations', () => {
   it('returns the result of a sum', () => {
     const results = calculate({ total: '2', next: '2', operation: '+' }, '=');
-    const expected = { total: "4", next: null, operation: null };
+    const expected = { total: '4', next: null, operation: null };
     expect(results).toMatchObject(expected);
   });
 
@@ -27,7 +27,7 @@ describe('calculations', () => {
 
   it('returns the operation if equals null', () => {
     const results = calculate({ total: '2', next: null, operation: null }, '+');
-    const expected = { total: "2", next: null, operation: '+' };
+    const expected = { total: '2', next: null, operation: '+' };
     expect(results).toMatchObject(expected);
   });
 
@@ -69,19 +69,19 @@ describe('tests on buttons logic', () => {
     expect(values).toMatchObject(expected);
   });
 
-  it ('= logic returns the total from a calculation', () => {
+  it('= logic returns the total from a calculation', () => {
     const values = calculate({ total: '10', next: '42', operation: '+' }, '=');
     const expected = { total: '52', next: null, operation: null };
     expect(values).toMatchObject(expected);
   });
 
-  it ('. logic returns a dot after the number if it is not zero', () => {
+  it('. logic returns a dot after the number if it is not zero', () => {
     const values = calculate({ total: '10', next: null, operation: null }, '.');
     const expected = { total: '10.', next: null, operation: null };
     expect(values).toMatchObject(expected);
   });
 
-  it ('. logic returns a zero with a dot', () => {
+  it('. logic returns a zero with a dot', () => {
     const values = calculate({ total: null, next: null, operation: null }, '.');
     const expected = { total: '0.', next: null, operation: null };
     expect(values).toMatchObject(expected);
@@ -106,4 +106,4 @@ it('returns an empty object if the button is invalid', () => {
   const number = calculate({ total: null, next: null, operation: null }, 'g');
   const expected = {};
   expect(number).toMatchObject(expected);
-})
+});
