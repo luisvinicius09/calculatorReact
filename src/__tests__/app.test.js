@@ -13,6 +13,36 @@ it('renders the app correctly', () => {
   expect(app).toMatchSnapshot();
 });
 
+it('should render the button x', () => {
+  const { getByText } = render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+  );
+  const btnName = getByText(/x/);
+  expect(btnName).toBeInTheDocument();
+});
+
+it('should render the button %', () => {
+  const { getByText } = render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+  );
+  const btnName = getByText(/%/);
+  expect(btnName).toBeInTheDocument();
+});
+
+it('should render the button =', () => {
+  const { getByText } = render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+  );
+  const btnName = getByText(/=/);
+  expect(btnName).toBeInTheDocument();
+});
+
 it('should render the number 1', () => {
   const { getByText } = render(
     <BrowserRouter>
