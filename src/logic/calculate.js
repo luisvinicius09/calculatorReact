@@ -10,17 +10,19 @@ const calculate = ({ total, next, operation }, button) => {
         operation: null,
       };
     case '+/-':
-      if (total) {
+      if (!operation) {
         return {
           total: (Big(total).times(-1)).toString(),
+          next,
+          operation,
         };
-      }
-      if (next) {
+      } else {
         return {
+          total,
           next: (Big(next).times(-1)).toString(),
+          operation,
         };
       }
-      return {};
     case '%':
       if (total && !next) {
         if (!operation) {
